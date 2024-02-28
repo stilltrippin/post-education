@@ -8,7 +8,10 @@ public final class ProductsPage extends AbstractPage {
     @FindBy(className = "title")
     private WebElement lblTitle;
 
-    @Override
+    public ProductsPage(WebDriver driver) {
+        super(driver);
+    }
+
     public void initComponents() {
         header = new Header(driver);
         sideNavMenu = new SideNavMenu(driver);

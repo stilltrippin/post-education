@@ -37,19 +37,18 @@ public class AuthPage extends AbstractPage {
         return initPage(SignupPage.class, driver);
     }
 
-    @Override
     public void login(String email, String password) {
         emailLoginInput.sendKeys(email);
         passwordLoginInput.sendKeys(password);
         loginButton.click();
     }
 
-    @Override
+
     public boolean isErrorShown() {
         return errorMessage.isDisplayed();
     }
 
-    @Override
+
     public Header getHeader() {
         return header;
     }
